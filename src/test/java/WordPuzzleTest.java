@@ -16,7 +16,7 @@ public class WordPuzzleTest {
   }
 
   @Test //test for sentence "Tuesdays Dead"
-  public void createPuzzle_forSentenceString_String() {
+  public void createPuzzle_forSentenceString_puzzledString() {
     WordPuzzle puzzle = new WordPuzzle();
     assertEquals("T--sd-ys D--d", puzzle.createPuzzle("Tuesdays Dead"));
   }
