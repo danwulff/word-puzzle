@@ -32,14 +32,4 @@ public class AppTest extends FluentTest {
     goTo("http://localhost:4567/result?inputSentence=Ain%27t+no+rest+for+the+wicked");
     assertThat(pageSource()).contains("--n't n- r-st f-r th- w-ck-d");
   }
-  @Test //test upper case alphabet
-  public void upperAlphabetTest() {
-    goTo("http://localhost:4567/result?inputSentence=ABCDEFGHIJKLMNOPQRSTUVWXYZ");
-    assertThat(pageSource()).contains("-BCD-FGH-JKLMN-PQRST-VWXYZ");
-  }
-  @Test //test lower case alphabet
-  public void lowerAlphabetTest() {
-    goTo("http://localhost:4567/result?inputSentence=abcdefghijklmnopqrstuvwxyz");
-    assertThat(pageSource()).contains("-bcd-fgh-jklmn-pqrst-vwxyz");
-  }
 }
